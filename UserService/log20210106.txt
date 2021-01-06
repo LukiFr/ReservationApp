@@ -1,0 +1,933 @@
+2021-01-06 01:25:27.072 +01:00 [DBG] Hosting starting
+2021-01-06 01:25:27.408 +01:00 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-06 01:25:27.478 +01:00 [DBG] Reading data from file 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys\key-6c4db5d7-0385-45b9-8d0e-4b3b066fc119.xml'.
+2021-01-06 01:25:27.541 +01:00 [DBG] Found key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119}.
+2021-01-06 01:25:27.575 +01:00 [DBG] Considering key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} with expiration date 2021-01-10 17:56:15Z as default key.
+2021-01-06 01:25:27.604 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-01-06 01:25:27.634 +01:00 [DBG] Decrypting secret element using Windows DPAPI.
+2021-01-06 01:25:27.642 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-01-06 01:25:27.664 +01:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2021-01-06 01:25:27.678 +01:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2021-01-06 01:25:27.694 +01:00 [DBG] Using key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} as the default key.
+2021-01-06 01:25:27.698 +01:00 [DBG] Key ring with default key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} was loaded during application startup.
+2021-01-06 01:25:50.335 +01:00 [DBG] Failed to locate the development https certificate at 'null'.
+2021-01-06 01:25:50.475 +01:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 04FCC8833D747B4EC23C7D55EB302A8BB9D18B02)
+2021-01-06 01:25:50.494 +01:00 [INF] Now listening on: https://localhost:5000
+2021-01-06 01:25:50.501 +01:00 [DBG] Loaded hosting startup assembly UserService
+2021-01-06 01:25:50.506 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-06 01:25:50.512 +01:00 [INF] Hosting environment: Development
+2021-01-06 01:25:50.518 +01:00 [INF] Content root path: C:\Users\Admin\source\repos\UserService\UserService
+2021-01-06 01:25:50.523 +01:00 [DBG] Hosting started
+2021-01-06 01:25:50.760 +01:00 [DBG] Connection id "0HM5HR6FGTLR8" accepted.
+2021-01-06 01:25:50.760 +01:00 [DBG] Connection id "0HM5HR6FGTLR9" accepted.
+2021-01-06 01:25:51.011 +01:00 [DBG] Connection id "0HM5HR6FGTLR9" received FIN.
+2021-01-06 01:25:51.018 +01:00 [DBG] Connection id "0HM5HR6FGTLR8" received FIN.
+2021-01-06 01:25:51.009 +01:00 [DBG] Connection id "0HM5HR6FGTLR8" started.
+2021-01-06 01:25:51.023 +01:00 [DBG] Connection id "0HM5HR6FGTLR9" started.
+2021-01-06 01:25:51.060 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ProcessAuthentication(LazyAsyncResult lazyResult, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__69_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.InnerOnConnectionAsync(ConnectionContext context)
+2021-01-06 01:25:51.060 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ProcessAuthentication(LazyAsyncResult lazyResult, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__69_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.InnerOnConnectionAsync(ConnectionContext context)
+2021-01-06 01:25:51.169 +01:00 [DBG] Connection id "0HM5HR6FGTLR8" stopped.
+2021-01-06 01:25:51.361 +01:00 [DBG] Connection id "0HM5HR6FGTLR9" stopped.
+2021-01-06 01:25:51.376 +01:00 [DBG] Connection id "0HM5HR6FGTLR8" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-01-06 01:25:51.384 +01:00 [DBG] Connection id "0HM5HR6FGTLR9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-01-06 01:25:52.368 +01:00 [DBG] Connection id "0HM5HR6FGTLRA" accepted.
+2021-01-06 01:25:52.462 +01:00 [DBG] Connection id "0HM5HR6FGTLRA" started.
+2021-01-06 01:25:52.602 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" sending "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE"
+2021-01-06 01:25:52.636 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 01:25:52.651 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" received "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE"
+2021-01-06 01:25:52.665 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 01:25:52.676 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 01:25:52.685 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" received "HEADERS" frame for stream ID 1 with length 477 and flags "END_STREAM, END_HEADERS, PRIORITY"
+2021-01-06 01:25:52.753 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 01:25:52.871 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/users  
+2021-01-06 01:25:52.893 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-01-06 01:25:52.901 +01:00 [VRB] All hosts are allowed.
+2021-01-06 01:25:53.013 +01:00 [DBG] 1 candidate(s) found for the request path '/api/users'
+2021-01-06 01:25:53.034 +01:00 [DBG] Endpoint 'UserService.Controllers.UsersController.GetAll (UserService)' with route pattern 'api/Users' is valid for the request path '/api/users'
+2021-01-06 01:25:53.047 +01:00 [DBG] Request matched endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 01:25:53.300 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Extensions.Options.OptionsValidationException: The 'Instance' option must be provided.
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AzureADJwtBearerOptionsConfiguration.Configure(String name, JwtBearerOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-06 01:25:53.472 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" sending "HEADERS" frame for stream ID 1 with length 92 and flags "END_HEADERS"
+2021-01-06 01:25:53.492 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" sending "DATA" frame for stream ID 1 with length 16384 and flags "NONE"
+2021-01-06 01:25:53.501 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" sending "DATA" frame for stream ID 1 with length 9646 and flags "NONE"
+2021-01-06 01:25:53.522 +01:00 [ERR] HTTP GET /api/users responded 500 in 602.8453 ms
+2021-01-06 01:25:53.561 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" sending "DATA" frame for stream ID 1 with length 0 and flags "END_STREAM"
+2021-01-06 01:25:53.596 +01:00 [INF] Request finished in 771.9139ms 500 text/html; charset=utf-8
+2021-01-06 01:26:00.122 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" received "HEADERS" frame for stream ID 3 with length 38 and flags "END_STREAM, END_HEADERS, PRIORITY"
+2021-01-06 01:26:00.184 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/users  
+2021-01-06 01:26:00.193 +01:00 [VRB] All hosts are allowed.
+2021-01-06 01:26:00.198 +01:00 [DBG] 1 candidate(s) found for the request path '/api/users'
+2021-01-06 01:26:00.208 +01:00 [DBG] Endpoint 'UserService.Controllers.UsersController.GetAll (UserService)' with route pattern 'api/Users' is valid for the request path '/api/users'
+2021-01-06 01:26:00.218 +01:00 [DBG] Request matched endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 01:26:00.242 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Extensions.Options.OptionsValidationException: The 'Instance' option must be provided.
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AzureADJwtBearerOptionsConfiguration.Configure(String name, JwtBearerOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-06 01:26:00.286 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" sending "HEADERS" frame for stream ID 3 with length 92 and flags "END_HEADERS"
+2021-01-06 01:26:00.295 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" sending "DATA" frame for stream ID 3 with length 16384 and flags "NONE"
+2021-01-06 01:26:00.303 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" sending "DATA" frame for stream ID 3 with length 9540 and flags "NONE"
+2021-01-06 01:26:00.311 +01:00 [ERR] HTTP GET /api/users responded 500 in 113.4360 ms
+2021-01-06 01:26:00.325 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" sending "DATA" frame for stream ID 3 with length 0 and flags "END_STREAM"
+2021-01-06 01:26:00.368 +01:00 [INF] Request finished in 231.6465ms 500 text/html; charset=utf-8
+2021-01-06 01:26:06.767 +01:00 [INF] Application is shutting down...
+2021-01-06 01:26:06.774 +01:00 [DBG] Hosting stopping
+2021-01-06 01:26:06.788 +01:00 [DBG] Connection id "0HM5HR6FGTLRA" is closing.
+2021-01-06 01:26:06.803 +01:00 [DBG] Connection id "0HM5HR6FGTLRA" is closed. The last processed stream ID was 3.
+2021-01-06 01:26:06.808 +01:00 [VRB] Connection id "0HM5HR6FGTLRA" sending "GOAWAY" frame for stream ID 0 with length 8 and flags 0x0
+2021-01-06 01:26:06.817 +01:00 [DBG] Connection id "0HM5HR6FGTLRA" received FIN.
+2021-01-06 01:26:06.825 +01:00 [DBG] Connection id "0HM5HR6FGTLRA" sending FIN because: "The client closed the connection."
+2021-01-06 01:26:06.832 +01:00 [DBG] Connection id "0HM5HR6FGTLRA" stopped.
+2021-01-06 01:26:06.843 +01:00 [DBG] Hosting stopped
+2021-01-06 01:26:16.374 +01:00 [DBG] Hosting starting
+2021-01-06 01:26:16.677 +01:00 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-06 01:26:16.709 +01:00 [DBG] Reading data from file 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys\key-6c4db5d7-0385-45b9-8d0e-4b3b066fc119.xml'.
+2021-01-06 01:26:16.741 +01:00 [DBG] Found key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119}.
+2021-01-06 01:26:16.764 +01:00 [DBG] Considering key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} with expiration date 2021-01-10 17:56:15Z as default key.
+2021-01-06 01:26:16.789 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-01-06 01:26:16.800 +01:00 [DBG] Decrypting secret element using Windows DPAPI.
+2021-01-06 01:26:16.805 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-01-06 01:26:16.820 +01:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2021-01-06 01:26:16.830 +01:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2021-01-06 01:26:16.840 +01:00 [DBG] Using key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} as the default key.
+2021-01-06 01:26:16.845 +01:00 [DBG] Key ring with default key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} was loaded during application startup.
+2021-01-06 01:26:18.607 +01:00 [DBG] Failed to locate the development https certificate at 'null'.
+2021-01-06 01:26:18.739 +01:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 04FCC8833D747B4EC23C7D55EB302A8BB9D18B02)
+2021-01-06 01:26:18.773 +01:00 [INF] Now listening on: https://localhost:5000
+2021-01-06 01:26:18.788 +01:00 [DBG] Loaded hosting startup assembly UserService
+2021-01-06 01:26:18.798 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-06 01:26:18.807 +01:00 [INF] Hosting environment: Development
+2021-01-06 01:26:18.814 +01:00 [INF] Content root path: C:\Users\Admin\source\repos\UserService\UserService
+2021-01-06 01:26:18.919 +01:00 [DBG] Hosting started
+2021-01-06 01:26:19.323 +01:00 [DBG] Connection id "0HM5HR6O1DE85" received FIN.
+2021-01-06 01:26:19.335 +01:00 [DBG] Connection id "0HM5HR6O1DE85" accepted.
+2021-01-06 01:26:19.344 +01:00 [DBG] Connection id "0HM5HR6O1DE85" started.
+2021-01-06 01:26:19.368 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ProcessAuthentication(LazyAsyncResult lazyResult, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__69_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.InnerOnConnectionAsync(ConnectionContext context)
+2021-01-06 01:26:19.538 +01:00 [DBG] Connection id "0HM5HR6O1DE85" stopped.
+2021-01-06 01:26:19.550 +01:00 [DBG] Connection id "0HM5HR6O1DE85" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-01-06 01:26:20.406 +01:00 [DBG] Connection id "0HM5HR6O1DE86" accepted.
+2021-01-06 01:26:20.481 +01:00 [DBG] Connection id "0HM5HR6O1DE86" started.
+2021-01-06 01:26:20.588 +01:00 [VRB] Connection id "0HM5HR6O1DE86" sending "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE"
+2021-01-06 01:26:20.604 +01:00 [VRB] Connection id "0HM5HR6O1DE86" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 01:26:20.618 +01:00 [VRB] Connection id "0HM5HR6O1DE86" received "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE"
+2021-01-06 01:26:20.659 +01:00 [VRB] Connection id "0HM5HR6O1DE86" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 01:26:20.681 +01:00 [VRB] Connection id "0HM5HR6O1DE86" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 01:26:20.699 +01:00 [VRB] Connection id "0HM5HR6O1DE86" received "HEADERS" frame for stream ID 1 with length 477 and flags "END_STREAM, END_HEADERS, PRIORITY"
+2021-01-06 01:26:20.766 +01:00 [VRB] Connection id "0HM5HR6O1DE86" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 01:26:20.912 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/users  
+2021-01-06 01:26:20.932 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-01-06 01:26:20.940 +01:00 [VRB] All hosts are allowed.
+2021-01-06 01:26:21.043 +01:00 [DBG] 1 candidate(s) found for the request path '/api/users'
+2021-01-06 01:26:21.084 +01:00 [DBG] Endpoint 'UserService.Controllers.UsersController.GetAll (UserService)' with route pattern 'api/Users' is valid for the request path '/api/users'
+2021-01-06 01:26:21.105 +01:00 [DBG] Request matched endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 01:26:21.344 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Extensions.Options.OptionsValidationException: The 'Instance' option must be provided.
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AzureADJwtBearerOptionsConfiguration.Configure(String name, JwtBearerOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-06 01:26:21.548 +01:00 [VRB] Connection id "0HM5HR6O1DE86" sending "HEADERS" frame for stream ID 1 with length 92 and flags "END_HEADERS"
+2021-01-06 01:26:21.564 +01:00 [VRB] Connection id "0HM5HR6O1DE86" sending "DATA" frame for stream ID 1 with length 16384 and flags "NONE"
+2021-01-06 01:26:21.573 +01:00 [VRB] Connection id "0HM5HR6O1DE86" sending "DATA" frame for stream ID 1 with length 9646 and flags "NONE"
+2021-01-06 01:26:21.589 +01:00 [ERR] HTTP GET /api/users responded 500 in 631.4488 ms
+2021-01-06 01:26:21.610 +01:00 [VRB] Connection id "0HM5HR6O1DE86" sending "DATA" frame for stream ID 1 with length 0 and flags "END_STREAM"
+2021-01-06 01:26:21.677 +01:00 [INF] Request finished in 832.1703ms 500 text/html; charset=utf-8
+2021-01-06 01:26:53.589 +01:00 [DBG] Hosting starting
+2021-01-06 01:26:55.407 +01:00 [DBG] Failed to locate the development https certificate at 'null'.
+2021-01-06 01:26:55.513 +01:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 04FCC8833D747B4EC23C7D55EB302A8BB9D18B02)
+2021-01-06 01:26:55.552 +01:00 [INF] Now listening on: https://localhost:5000
+2021-01-06 01:26:55.560 +01:00 [DBG] Loaded hosting startup assembly UserService
+2021-01-06 01:26:55.567 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-06 01:26:55.571 +01:00 [INF] Hosting environment: Development
+2021-01-06 01:26:55.576 +01:00 [INF] Content root path: C:\Users\Admin\source\repos\UserService\UserService
+2021-01-06 01:26:55.580 +01:00 [DBG] Hosting started
+2021-01-06 01:26:55.697 +01:00 [DBG] Connection id "0HM5HR72S9VCK" received FIN.
+2021-01-06 01:26:55.697 +01:00 [DBG] Connection id "0HM5HR72S9VCJ" received FIN.
+2021-01-06 01:26:55.729 +01:00 [DBG] Connection id "0HM5HR72S9VCK" accepted.
+2021-01-06 01:26:55.729 +01:00 [DBG] Connection id "0HM5HR72S9VCJ" accepted.
+2021-01-06 01:26:55.741 +01:00 [DBG] Connection id "0HM5HR72S9VCK" started.
+2021-01-06 01:26:55.759 +01:00 [DBG] Connection id "0HM5HR72S9VCJ" started.
+2021-01-06 01:26:55.786 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ProcessAuthentication(LazyAsyncResult lazyResult, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__69_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.InnerOnConnectionAsync(ConnectionContext context)
+2021-01-06 01:26:55.786 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ProcessAuthentication(LazyAsyncResult lazyResult, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__69_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.InnerOnConnectionAsync(ConnectionContext context)
+2021-01-06 01:26:55.928 +01:00 [DBG] Connection id "0HM5HR72S9VCJ" stopped.
+2021-01-06 01:26:55.948 +01:00 [DBG] Connection id "0HM5HR72S9VCK" stopped.
+2021-01-06 01:26:55.965 +01:00 [DBG] Connection id "0HM5HR72S9VCJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-01-06 01:26:55.990 +01:00 [DBG] Connection id "0HM5HR72S9VCK" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-01-06 01:26:56.864 +01:00 [DBG] Connection id "0HM5HR72S9VCL" accepted.
+2021-01-06 01:26:56.903 +01:00 [DBG] Connection id "0HM5HR72S9VCL" started.
+2021-01-06 01:26:57.023 +01:00 [VRB] Connection id "0HM5HR72S9VCL" sending "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE"
+2021-01-06 01:26:57.063 +01:00 [VRB] Connection id "0HM5HR72S9VCL" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 01:26:57.140 +01:00 [VRB] Connection id "0HM5HR72S9VCL" received "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE"
+2021-01-06 01:26:57.159 +01:00 [VRB] Connection id "0HM5HR72S9VCL" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 01:26:57.175 +01:00 [VRB] Connection id "0HM5HR72S9VCL" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 01:26:57.195 +01:00 [VRB] Connection id "0HM5HR72S9VCL" received "HEADERS" frame for stream ID 1 with length 477 and flags "END_STREAM, END_HEADERS, PRIORITY"
+2021-01-06 01:26:57.282 +01:00 [VRB] Connection id "0HM5HR72S9VCL" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 01:26:57.439 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/users  
+2021-01-06 01:26:57.476 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-01-06 01:26:57.486 +01:00 [VRB] All hosts are allowed.
+2021-01-06 01:26:57.661 +01:00 [DBG] 1 candidate(s) found for the request path '/api/users'
+2021-01-06 01:26:57.786 +01:00 [DBG] Endpoint 'UserService.Controllers.UsersController.GetAll (UserService)' with route pattern 'api/Users' is valid for the request path '/api/users'
+2021-01-06 01:26:57.796 +01:00 [DBG] Request matched endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 01:26:57.822 +01:00 [INF] Executing endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 01:26:57.856 +01:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2021-01-06 01:26:57.979 +01:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UserService.Controllers.UsersController (UserService).
+2021-01-06 01:26:58.006 +01:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2021-01-06 01:26:58.022 +01:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2021-01-06 01:26:58.038 +01:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2021-01-06 01:26:58.074 +01:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2021-01-06 01:26:58.084 +01:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2021-01-06 01:26:58.100 +01:00 [DBG] Executing controller factory for controller UserService.Controllers.UsersController (UserService)
+2021-01-06 01:26:58.493 +01:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2021-01-06 01:26:58.554 +01:00 [DBG] Executed controller factory for controller UserService.Controllers.UsersController (UserService)
+2021-01-06 01:26:58.563 +01:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 01:26:58.572 +01:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 01:26:58.577 +01:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 01:26:58.585 +01:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 01:26:58.718 +01:00 [INF] Executing action method UserService.Controllers.UsersController.GetAll (UserService) - Validation state: "Valid"
+2021-01-06 01:26:59.932 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-01-06 01:27:00.133 +01:00 [DBG] Compiling query expression: 
+'DbSet<User>()'
+2021-01-06 01:27:00.575 +01:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.age (string), 1], [Property: User.email_adress (string), 2], [Property: User.first_name (string), 3], [Property: User.last_name (string), 4], [Property: User.password (string), 5], }
+        SELECT u.id, u.age, u.email_adress, u.first_name, u.last_name, u.password
+        FROM Users AS u), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    UserService.Model.DataContext, 
+    False, 
+    False
+)'
+2021-01-06 01:27:00.652 +01:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2021-01-06 01:27:00.739 +01:00 [DBG] Created DbCommand for 'ExecuteReader' (76ms).
+2021-01-06 01:27:00.755 +01:00 [DBG] Opening connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 01:27:01.552 +01:00 [DBG] Opened connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 01:27:01.603 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[id], [u].[age], [u].[email_adress], [u].[first_name], [u].[last_name], [u].[password]
+FROM [Users] AS [u]
+2021-01-06 01:27:01.850 +01:00 [INF] Executed DbCommand (243ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[id], [u].[age], [u].[email_adress], [u].[first_name], [u].[last_name], [u].[password]
+FROM [Users] AS [u]
+2021-01-06 01:27:01.982 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:02.070 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:02.075 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:02.086 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:02.098 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:02.106 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:02.121 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:02.149 +01:00 [DBG] A data reader was disposed.
+2021-01-06 01:27:02.158 +01:00 [DBG] Closing connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 01:27:02.194 +01:00 [DBG] Closed connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 01:27:02.290 +01:00 [INF] Executed action method UserService.Controllers.UsersController.GetAll (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3551.2831ms.
+2021-01-06 01:27:02.313 +01:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 01:27:02.350 +01:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 01:27:02.382 +01:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 01:27:02.401 +01:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 01:27:02.442 +01:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 01:27:02.455 +01:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 01:27:02.468 +01:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2021-01-06 01:27:02.484 +01:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2021-01-06 01:27:02.501 +01:00 [DBG] No information found on request to perform content negotiation.
+2021-01-06 01:27:02.506 +01:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2021-01-06 01:27:02.516 +01:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2021-01-06 01:27:02.526 +01:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2021-01-06 01:27:02.537 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserService.Model.User, UserService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-01-06 01:27:02.597 +01:00 [VRB] Connection id "0HM5HR72S9VCL" sending "HEADERS" frame for stream ID 1 with length 123 and flags "END_HEADERS"
+2021-01-06 01:27:02.705 +01:00 [VRB] Connection id "0HM5HR72S9VCL" sending "DATA" frame for stream ID 1 with length 706 and flags "NONE"
+2021-01-06 01:27:02.723 +01:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2021-01-06 01:27:02.792 +01:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 01:27:02.939 +01:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 01:27:02.983 +01:00 [INF] Executed action UserService.Controllers.UsersController.GetAll (UserService) in 4867.2886ms
+2021-01-06 01:27:02.991 +01:00 [INF] Executed endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 01:27:03.007 +01:00 [INF] HTTP GET /api/users responded 200 in 5506.5245 ms
+2021-01-06 01:27:03.020 +01:00 [VRB] Connection id "0HM5HR72S9VCL" sending "DATA" frame for stream ID 1 with length 0 and flags "END_STREAM"
+2021-01-06 01:27:03.069 +01:00 [DBG] 'DataContext' disposed.
+2021-01-06 01:27:03.153 +01:00 [INF] Request finished in 5776.2061ms 200 application/json; charset=utf-8
+2021-01-06 01:27:08.478 +01:00 [DBG] Connection id "0HM5HR72S9VCM" accepted.
+2021-01-06 01:27:08.488 +01:00 [DBG] Connection id "0HM5HR72S9VCM" started.
+2021-01-06 01:27:08.530 +01:00 [VRB] Connection id "0HM5HR72S9VCM" sending "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE"
+2021-01-06 01:27:08.551 +01:00 [VRB] Connection id "0HM5HR72S9VCM" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 01:27:08.623 +01:00 [VRB] Connection id "0HM5HR72S9VCM" received "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE"
+2021-01-06 01:27:08.649 +01:00 [VRB] Connection id "0HM5HR72S9VCM" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 01:27:08.658 +01:00 [VRB] Connection id "0HM5HR72S9VCM" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 01:27:08.669 +01:00 [VRB] Connection id "0HM5HR72S9VCM" received "HEADERS" frame for stream ID 1 with length 366 and flags "END_STREAM, END_HEADERS, PRIORITY"
+2021-01-06 01:27:08.682 +01:00 [VRB] Connection id "0HM5HR72S9VCM" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 01:27:08.687 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/users  
+2021-01-06 01:27:08.697 +01:00 [VRB] All hosts are allowed.
+2021-01-06 01:27:08.704 +01:00 [DBG] 1 candidate(s) found for the request path '/api/users'
+2021-01-06 01:27:08.714 +01:00 [DBG] Endpoint 'UserService.Controllers.UsersController.GetAll (UserService)' with route pattern 'api/Users' is valid for the request path '/api/users'
+2021-01-06 01:27:08.731 +01:00 [DBG] Request matched endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 01:27:08.746 +01:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2021-01-06 01:27:08.752 +01:00 [INF] CORS policy execution successful.
+2021-01-06 01:27:08.762 +01:00 [INF] Executing endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 01:27:08.777 +01:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UserService.Controllers.UsersController (UserService).
+2021-01-06 01:27:08.788 +01:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2021-01-06 01:27:08.797 +01:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2021-01-06 01:27:08.805 +01:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2021-01-06 01:27:08.818 +01:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2021-01-06 01:27:08.828 +01:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2021-01-06 01:27:08.835 +01:00 [DBG] Executing controller factory for controller UserService.Controllers.UsersController (UserService)
+2021-01-06 01:27:08.843 +01:00 [DBG] Executed controller factory for controller UserService.Controllers.UsersController (UserService)
+2021-01-06 01:27:08.850 +01:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 01:27:08.856 +01:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 01:27:08.864 +01:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 01:27:08.871 +01:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 01:27:08.906 +01:00 [INF] Executing action method UserService.Controllers.UsersController.GetAll (UserService) - Validation state: "Valid"
+2021-01-06 01:27:08.979 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-01-06 01:27:08.986 +01:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2021-01-06 01:27:08.992 +01:00 [DBG] Created DbCommand for 'ExecuteReader' (5ms).
+2021-01-06 01:27:08.997 +01:00 [DBG] Opening connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 01:27:09.007 +01:00 [DBG] Opened connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 01:27:09.014 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[id], [u].[age], [u].[email_adress], [u].[first_name], [u].[last_name], [u].[password]
+FROM [Users] AS [u]
+2021-01-06 01:27:09.065 +01:00 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[id], [u].[age], [u].[email_adress], [u].[first_name], [u].[last_name], [u].[password]
+FROM [Users] AS [u]
+2021-01-06 01:27:09.090 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:09.098 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:09.103 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:09.112 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:09.117 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:09.122 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:09.131 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:09.137 +01:00 [DBG] A data reader was disposed.
+2021-01-06 01:27:09.144 +01:00 [DBG] Closing connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 01:27:09.152 +01:00 [DBG] Closed connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 01:27:09.163 +01:00 [INF] Executed action method UserService.Controllers.UsersController.GetAll (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 247.021ms.
+2021-01-06 01:27:09.175 +01:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 01:27:09.183 +01:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 01:27:09.192 +01:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 01:27:09.197 +01:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 01:27:09.207 +01:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 01:27:09.215 +01:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 01:27:09.223 +01:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2021-01-06 01:27:09.228 +01:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2021-01-06 01:27:09.237 +01:00 [DBG] No information found on request to perform content negotiation.
+2021-01-06 01:27:09.243 +01:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2021-01-06 01:27:09.247 +01:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2021-01-06 01:27:09.253 +01:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2021-01-06 01:27:09.262 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserService.Model.User, UserService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-01-06 01:27:09.273 +01:00 [VRB] Connection id "0HM5HR72S9VCM" sending "HEADERS" frame for stream ID 1 with length 197 and flags "END_HEADERS"
+2021-01-06 01:27:09.279 +01:00 [VRB] Connection id "0HM5HR72S9VCM" sending "DATA" frame for stream ID 1 with length 706 and flags "NONE"
+2021-01-06 01:27:09.285 +01:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2021-01-06 01:27:09.293 +01:00 [VRB] Connection id "0HM5HR72S9VCM" received "HEADERS" frame for stream ID 3 with length 28 and flags "END_STREAM, END_HEADERS, PRIORITY"
+2021-01-06 01:27:09.297 +01:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 01:27:09.306 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/users  
+2021-01-06 01:27:09.312 +01:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 01:27:09.317 +01:00 [VRB] All hosts are allowed.
+2021-01-06 01:27:09.323 +01:00 [INF] Executed action UserService.Controllers.UsersController.GetAll (UserService) in 488.6265ms
+2021-01-06 01:27:09.327 +01:00 [DBG] 1 candidate(s) found for the request path '/api/users'
+2021-01-06 01:27:09.368 +01:00 [INF] Executed endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 01:27:09.381 +01:00 [INF] HTTP GET /api/users responded 200 in 677.4374 ms
+2021-01-06 01:27:09.372 +01:00 [DBG] Endpoint 'UserService.Controllers.UsersController.GetAll (UserService)' with route pattern 'api/Users' is valid for the request path '/api/users'
+2021-01-06 01:27:09.397 +01:00 [VRB] Connection id "0HM5HR72S9VCM" sending "DATA" frame for stream ID 1 with length 0 and flags "END_STREAM"
+2021-01-06 01:27:09.406 +01:00 [DBG] Request matched endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 01:27:09.417 +01:00 [DBG] 'DataContext' disposed.
+2021-01-06 01:27:09.428 +01:00 [DBG] The request has an origin header: 'http://localhost:4200'.
+2021-01-06 01:27:09.452 +01:00 [INF] CORS policy execution successful.
+2021-01-06 01:27:09.456 +01:00 [INF] Request finished in 770.0118ms 200 application/json; charset=utf-8
+2021-01-06 01:27:09.484 +01:00 [INF] Executing endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 01:27:09.519 +01:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UserService.Controllers.UsersController (UserService).
+2021-01-06 01:27:09.527 +01:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2021-01-06 01:27:09.537 +01:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2021-01-06 01:27:09.543 +01:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2021-01-06 01:27:09.553 +01:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2021-01-06 01:27:09.561 +01:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2021-01-06 01:27:09.570 +01:00 [DBG] Executing controller factory for controller UserService.Controllers.UsersController (UserService)
+2021-01-06 01:27:09.584 +01:00 [DBG] Executed controller factory for controller UserService.Controllers.UsersController (UserService)
+2021-01-06 01:27:09.589 +01:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 01:27:09.602 +01:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 01:27:09.612 +01:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 01:27:09.621 +01:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 01:27:09.660 +01:00 [INF] Executing action method UserService.Controllers.UsersController.GetAll (UserService) - Validation state: "Valid"
+2021-01-06 01:27:09.679 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-01-06 01:27:09.688 +01:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2021-01-06 01:27:09.694 +01:00 [DBG] Created DbCommand for 'ExecuteReader' (5ms).
+2021-01-06 01:27:09.698 +01:00 [DBG] Opening connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 01:27:09.706 +01:00 [DBG] Opened connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 01:27:09.713 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[id], [u].[age], [u].[email_adress], [u].[first_name], [u].[last_name], [u].[password]
+FROM [Users] AS [u]
+2021-01-06 01:27:09.774 +01:00 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[id], [u].[age], [u].[email_adress], [u].[first_name], [u].[last_name], [u].[password]
+FROM [Users] AS [u]
+2021-01-06 01:27:09.820 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:09.826 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:09.836 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:09.844 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:09.851 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:09.860 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:09.866 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 01:27:09.873 +01:00 [DBG] A data reader was disposed.
+2021-01-06 01:27:09.880 +01:00 [DBG] Closing connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 01:27:09.886 +01:00 [DBG] Closed connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 01:27:09.894 +01:00 [INF] Executed action method UserService.Controllers.UsersController.GetAll (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 227.6381ms.
+2021-01-06 01:27:09.904 +01:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 01:27:09.916 +01:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 01:27:09.942 +01:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 01:27:09.947 +01:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 01:27:09.954 +01:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 01:27:09.962 +01:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 01:27:09.971 +01:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2021-01-06 01:27:09.976 +01:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2021-01-06 01:27:09.985 +01:00 [DBG] No information found on request to perform content negotiation.
+2021-01-06 01:27:09.992 +01:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2021-01-06 01:27:09.996 +01:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2021-01-06 01:27:10.001 +01:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2021-01-06 01:27:10.010 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserService.Model.User, UserService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-01-06 01:27:10.017 +01:00 [VRB] Connection id "0HM5HR72S9VCM" sending "HEADERS" frame for stream ID 3 with length 197 and flags "END_HEADERS"
+2021-01-06 01:27:10.027 +01:00 [VRB] Connection id "0HM5HR72S9VCM" sending "DATA" frame for stream ID 3 with length 706 and flags "NONE"
+2021-01-06 01:27:10.036 +01:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2021-01-06 01:27:10.050 +01:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 01:27:10.060 +01:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 01:27:10.098 +01:00 [INF] Executed action UserService.Controllers.UsersController.GetAll (UserService) in 528.6275ms
+2021-01-06 01:27:10.105 +01:00 [INF] Executed endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 01:27:10.113 +01:00 [INF] HTTP GET /api/users responded 200 in 785.4806 ms
+2021-01-06 01:27:10.120 +01:00 [VRB] Connection id "0HM5HR72S9VCM" sending "DATA" frame for stream ID 3 with length 0 and flags "END_STREAM"
+2021-01-06 01:27:10.129 +01:00 [DBG] 'DataContext' disposed.
+2021-01-06 01:27:10.139 +01:00 [INF] Request finished in 832.1198ms 200 application/json; charset=utf-8
+2021-01-06 01:27:43.241 +01:00 [DBG] Hosting starting
+2021-01-06 01:27:43.789 +01:00 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-06 01:27:43.833 +01:00 [DBG] Reading data from file 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys\key-6c4db5d7-0385-45b9-8d0e-4b3b066fc119.xml'.
+2021-01-06 01:27:43.873 +01:00 [DBG] Found key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119}.
+2021-01-06 01:27:43.899 +01:00 [DBG] Considering key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} with expiration date 2021-01-10 17:56:15Z as default key.
+2021-01-06 01:27:43.927 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-01-06 01:27:43.941 +01:00 [DBG] Decrypting secret element using Windows DPAPI.
+2021-01-06 01:27:43.947 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-01-06 01:27:43.964 +01:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2021-01-06 01:27:43.975 +01:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2021-01-06 01:27:43.990 +01:00 [DBG] Using key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} as the default key.
+2021-01-06 01:27:43.994 +01:00 [DBG] Key ring with default key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} was loaded during application startup.
+2021-01-06 01:28:20.962 +01:00 [DBG] Hosting starting
+2021-01-06 01:28:21.444 +01:00 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-06 01:28:21.497 +01:00 [DBG] Reading data from file 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys\key-6c4db5d7-0385-45b9-8d0e-4b3b066fc119.xml'.
+2021-01-06 01:28:21.556 +01:00 [DBG] Found key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119}.
+2021-01-06 01:28:21.633 +01:00 [DBG] Considering key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} with expiration date 2021-01-10 17:56:15Z as default key.
+2021-01-06 01:28:21.661 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-01-06 01:28:21.673 +01:00 [DBG] Decrypting secret element using Windows DPAPI.
+2021-01-06 01:28:21.681 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-01-06 01:28:21.699 +01:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2021-01-06 01:28:21.719 +01:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2021-01-06 01:28:21.733 +01:00 [DBG] Using key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} as the default key.
+2021-01-06 01:28:21.739 +01:00 [DBG] Key ring with default key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} was loaded during application startup.
+2021-01-06 01:28:23.109 +01:00 [DBG] Failed to locate the development https certificate at 'null'.
+2021-01-06 01:28:23.204 +01:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 04FCC8833D747B4EC23C7D55EB302A8BB9D18B02)
+2021-01-06 01:28:23.220 +01:00 [INF] Now listening on: https://localhost:5000
+2021-01-06 01:28:23.227 +01:00 [DBG] Loaded hosting startup assembly UserService
+2021-01-06 01:28:23.234 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-06 01:28:23.239 +01:00 [INF] Hosting environment: Development
+2021-01-06 01:28:23.244 +01:00 [INF] Content root path: C:\Users\Admin\source\repos\UserService\UserService
+2021-01-06 01:28:23.250 +01:00 [DBG] Hosting started
+2021-01-06 01:28:23.383 +01:00 [DBG] Connection id "0HM5HR7T0HISP" received FIN.
+2021-01-06 01:28:23.383 +01:00 [DBG] Connection id "0HM5HR7T0HISO" received FIN.
+2021-01-06 01:28:23.401 +01:00 [DBG] Connection id "0HM5HR7T0HISO" accepted.
+2021-01-06 01:28:23.401 +01:00 [DBG] Connection id "0HM5HR7T0HISP" accepted.
+2021-01-06 01:28:23.413 +01:00 [DBG] Connection id "0HM5HR7T0HISO" started.
+2021-01-06 01:28:23.418 +01:00 [DBG] Connection id "0HM5HR7T0HISP" started.
+2021-01-06 01:28:23.461 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ProcessAuthentication(LazyAsyncResult lazyResult, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__69_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.InnerOnConnectionAsync(ConnectionContext context)
+2021-01-06 01:28:23.461 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ProcessAuthentication(LazyAsyncResult lazyResult, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__69_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.InnerOnConnectionAsync(ConnectionContext context)
+2021-01-06 01:28:23.638 +01:00 [DBG] Connection id "0HM5HR7T0HISO" stopped.
+2021-01-06 01:28:23.638 +01:00 [DBG] Connection id "0HM5HR7T0HISP" stopped.
+2021-01-06 01:28:23.652 +01:00 [DBG] Connection id "0HM5HR7T0HISP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-01-06 01:28:23.652 +01:00 [DBG] Connection id "0HM5HR7T0HISO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-01-06 01:28:24.367 +01:00 [DBG] Connection id "0HM5HR7T0HISQ" accepted.
+2021-01-06 01:28:24.520 +01:00 [DBG] Connection id "0HM5HR7T0HISQ" started.
+2021-01-06 01:28:24.684 +01:00 [VRB] Connection id "0HM5HR7T0HISQ" sending "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE"
+2021-01-06 01:28:24.702 +01:00 [VRB] Connection id "0HM5HR7T0HISQ" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 01:28:24.712 +01:00 [VRB] Connection id "0HM5HR7T0HISQ" received "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE"
+2021-01-06 01:28:24.722 +01:00 [VRB] Connection id "0HM5HR7T0HISQ" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 01:28:24.737 +01:00 [VRB] Connection id "0HM5HR7T0HISQ" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 01:28:24.748 +01:00 [VRB] Connection id "0HM5HR7T0HISQ" received "HEADERS" frame for stream ID 1 with length 477 and flags "END_STREAM, END_HEADERS, PRIORITY"
+2021-01-06 01:28:24.833 +01:00 [VRB] Connection id "0HM5HR7T0HISQ" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 01:28:24.996 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/users  
+2021-01-06 01:28:25.021 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-01-06 01:28:25.035 +01:00 [VRB] All hosts are allowed.
+2021-01-06 01:28:25.159 +01:00 [DBG] 1 candidate(s) found for the request path '/api/users'
+2021-01-06 01:28:25.185 +01:00 [DBG] Endpoint 'UserService.Controllers.UsersController.GetAll (UserService)' with route pattern 'api/Users' is valid for the request path '/api/users'
+2021-01-06 01:28:25.211 +01:00 [DBG] Request matched endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 01:28:25.427 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Extensions.Options.OptionsValidationException: The 'Instance' option must be provided.
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AzureADJwtBearerOptionsConfiguration.Configure(String name, JwtBearerOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-06 01:28:25.623 +01:00 [VRB] Connection id "0HM5HR7T0HISQ" sending "HEADERS" frame for stream ID 1 with length 92 and flags "END_HEADERS"
+2021-01-06 01:28:25.635 +01:00 [VRB] Connection id "0HM5HR7T0HISQ" sending "DATA" frame for stream ID 1 with length 16384 and flags "NONE"
+2021-01-06 01:28:25.646 +01:00 [VRB] Connection id "0HM5HR7T0HISQ" sending "DATA" frame for stream ID 1 with length 9646 and flags "NONE"
+2021-01-06 01:28:25.665 +01:00 [ERR] HTTP GET /api/users responded 500 in 610.5920 ms
+2021-01-06 01:28:25.715 +01:00 [VRB] Connection id "0HM5HR7T0HISQ" sending "DATA" frame for stream ID 1 with length 0 and flags "END_STREAM"
+2021-01-06 01:28:25.744 +01:00 [INF] Request finished in 770.7565ms 500 text/html; charset=utf-8
+2021-01-06 01:36:48.549 +01:00 [DBG] Hosting starting
+2021-01-06 01:36:49.292 +01:00 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-06 01:36:49.341 +01:00 [DBG] Reading data from file 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys\key-6c4db5d7-0385-45b9-8d0e-4b3b066fc119.xml'.
+2021-01-06 01:36:49.430 +01:00 [DBG] Found key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119}.
+2021-01-06 01:36:49.468 +01:00 [DBG] Considering key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} with expiration date 2021-01-10 17:56:15Z as default key.
+2021-01-06 01:36:49.500 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-01-06 01:36:49.521 +01:00 [DBG] Decrypting secret element using Windows DPAPI.
+2021-01-06 01:36:49.531 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-01-06 01:36:49.546 +01:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2021-01-06 01:36:49.563 +01:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2021-01-06 01:36:49.595 +01:00 [DBG] Using key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} as the default key.
+2021-01-06 01:36:49.610 +01:00 [DBG] Key ring with default key {6c4db5d7-0385-45b9-8d0e-4b3b066fc119} was loaded during application startup.
+2021-01-06 02:08:08.106 +01:00 [DBG] Hosting starting
+2021-01-06 02:08:09.959 +01:00 [DBG] Failed to locate the development https certificate at 'null'.
+2021-01-06 02:08:10.063 +01:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 04FCC8833D747B4EC23C7D55EB302A8BB9D18B02)
+2021-01-06 02:08:10.093 +01:00 [INF] Now listening on: https://localhost:5000
+2021-01-06 02:08:10.100 +01:00 [DBG] Loaded hosting startup assembly UserService
+2021-01-06 02:08:10.106 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-06 02:08:10.111 +01:00 [INF] Hosting environment: Development
+2021-01-06 02:08:10.116 +01:00 [INF] Content root path: C:\Users\Admin\source\repos\UserService\UserService
+2021-01-06 02:08:10.120 +01:00 [DBG] Hosting started
+2021-01-06 02:08:10.601 +01:00 [DBG] Connection id "0HM5HRU4EQH11" received FIN.
+2021-01-06 02:08:10.601 +01:00 [DBG] Connection id "0HM5HRU4EQH10" received FIN.
+2021-01-06 02:08:10.633 +01:00 [DBG] Connection id "0HM5HRU4EQH10" accepted.
+2021-01-06 02:08:10.633 +01:00 [DBG] Connection id "0HM5HRU4EQH11" accepted.
+2021-01-06 02:08:10.642 +01:00 [DBG] Connection id "0HM5HRU4EQH11" started.
+2021-01-06 02:08:10.642 +01:00 [DBG] Connection id "0HM5HRU4EQH10" started.
+2021-01-06 02:08:10.681 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ProcessAuthentication(LazyAsyncResult lazyResult, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__69_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.InnerOnConnectionAsync(ConnectionContext context)
+2021-01-06 02:08:10.681 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ProcessAuthentication(LazyAsyncResult lazyResult, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__69_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.InnerOnConnectionAsync(ConnectionContext context)
+2021-01-06 02:08:10.819 +01:00 [DBG] Connection id "0HM5HRU4EQH11" stopped.
+2021-01-06 02:08:10.832 +01:00 [DBG] Connection id "0HM5HRU4EQH10" stopped.
+2021-01-06 02:08:10.846 +01:00 [DBG] Connection id "0HM5HRU4EQH10" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-01-06 02:08:10.846 +01:00 [DBG] Connection id "0HM5HRU4EQH11" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-01-06 02:08:11.575 +01:00 [DBG] Connection id "0HM5HRU4EQH12" accepted.
+2021-01-06 02:08:11.698 +01:00 [DBG] Connection id "0HM5HRU4EQH12" started.
+2021-01-06 02:08:11.868 +01:00 [VRB] Connection id "0HM5HRU4EQH12" sending "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE"
+2021-01-06 02:08:11.899 +01:00 [VRB] Connection id "0HM5HRU4EQH12" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 02:08:11.916 +01:00 [VRB] Connection id "0HM5HRU4EQH12" received "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE"
+2021-01-06 02:08:11.931 +01:00 [VRB] Connection id "0HM5HRU4EQH12" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 02:08:11.945 +01:00 [VRB] Connection id "0HM5HRU4EQH12" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 02:08:11.957 +01:00 [VRB] Connection id "0HM5HRU4EQH12" received "HEADERS" frame for stream ID 1 with length 477 and flags "END_STREAM, END_HEADERS, PRIORITY"
+2021-01-06 02:08:12.035 +01:00 [VRB] Connection id "0HM5HRU4EQH12" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 02:08:12.175 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/users  
+2021-01-06 02:08:12.207 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-01-06 02:08:12.220 +01:00 [VRB] All hosts are allowed.
+2021-01-06 02:08:12.338 +01:00 [DBG] 1 candidate(s) found for the request path '/api/users'
+2021-01-06 02:08:12.370 +01:00 [DBG] Endpoint 'UserService.Controllers.UsersController.GetAll (UserService)' with route pattern 'api/Users' is valid for the request path '/api/users'
+2021-01-06 02:08:12.381 +01:00 [DBG] Request matched endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 02:08:12.420 +01:00 [INF] Authorization failed.
+2021-01-06 02:08:12.435 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-06 02:08:12.777 +01:00 [VRB] Connection id "0HM5HRU4EQH12" sending "HEADERS" frame for stream ID 1 with length 92 and flags "END_HEADERS"
+2021-01-06 02:08:12.788 +01:00 [VRB] Connection id "0HM5HRU4EQH12" sending "DATA" frame for stream ID 1 with length 16384 and flags "NONE"
+2021-01-06 02:08:12.797 +01:00 [VRB] Connection id "0HM5HRU4EQH12" sending "DATA" frame for stream ID 1 with length 3650 and flags "NONE"
+2021-01-06 02:08:12.814 +01:00 [ERR] HTTP GET /api/users responded 500 in 575.5814 ms
+2021-01-06 02:08:12.824 +01:00 [VRB] Connection id "0HM5HRU4EQH12" sending "DATA" frame for stream ID 1 with length 0 and flags "END_STREAM"
+2021-01-06 02:08:12.847 +01:00 [INF] Request finished in 724.0721ms 500 text/html; charset=utf-8
+2021-01-06 02:08:15.849 +01:00 [INF] Application is shutting down...
+2021-01-06 02:08:15.855 +01:00 [DBG] Hosting stopping
+2021-01-06 02:08:15.867 +01:00 [DBG] Connection id "0HM5HRU4EQH12" is closing.
+2021-01-06 02:08:15.883 +01:00 [DBG] Connection id "0HM5HRU4EQH12" is closed. The last processed stream ID was 1.
+2021-01-06 02:08:15.889 +01:00 [VRB] Connection id "0HM5HRU4EQH12" sending "GOAWAY" frame for stream ID 0 with length 8 and flags 0x0
+2021-01-06 02:08:15.899 +01:00 [DBG] Connection id "0HM5HRU4EQH12" received FIN.
+2021-01-06 02:08:15.912 +01:00 [DBG] Connection id "0HM5HRU4EQH12" sending FIN because: "The client closed the connection."
+2021-01-06 02:08:15.919 +01:00 [DBG] Connection id "0HM5HRU4EQH12" stopped.
+2021-01-06 02:08:15.933 +01:00 [DBG] Hosting stopped
+2021-01-06 02:08:31.004 +01:00 [DBG] Hosting starting
+2021-01-06 02:08:32.677 +01:00 [DBG] Failed to locate the development https certificate at 'null'.
+2021-01-06 02:08:32.789 +01:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 04FCC8833D747B4EC23C7D55EB302A8BB9D18B02)
+2021-01-06 02:08:32.809 +01:00 [INF] Now listening on: https://localhost:5000
+2021-01-06 02:08:32.827 +01:00 [DBG] Loaded hosting startup assembly UserService
+2021-01-06 02:08:32.835 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-06 02:08:32.838 +01:00 [DBG] Connection id "0HM5HRUB2S92U" received FIN.
+2021-01-06 02:08:32.843 +01:00 [INF] Hosting environment: Development
+2021-01-06 02:08:32.850 +01:00 [INF] Content root path: C:\Users\Admin\source\repos\UserService\UserService
+2021-01-06 02:08:32.855 +01:00 [DBG] Hosting started
+2021-01-06 02:08:32.877 +01:00 [DBG] Connection id "0HM5HRUB2S92U" accepted.
+2021-01-06 02:08:32.884 +01:00 [DBG] Connection id "0HM5HRUB2S92U" started.
+2021-01-06 02:08:32.933 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslStream.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.ProcessAuthentication(LazyAsyncResult lazyResult, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__69_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.InnerOnConnectionAsync(ConnectionContext context)
+2021-01-06 02:08:33.088 +01:00 [DBG] Connection id "0HM5HRUB2S92U" stopped.
+2021-01-06 02:08:33.102 +01:00 [DBG] Connection id "0HM5HRUB2S92U" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-01-06 02:08:33.853 +01:00 [DBG] Connection id "0HM5HRUB2S92V" accepted.
+2021-01-06 02:08:33.901 +01:00 [DBG] Connection id "0HM5HRUB2S92V" started.
+2021-01-06 02:08:34.119 +01:00 [VRB] Connection id "0HM5HRUB2S92V" sending "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE"
+2021-01-06 02:08:34.138 +01:00 [VRB] Connection id "0HM5HRUB2S92V" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 02:08:34.147 +01:00 [VRB] Connection id "0HM5HRUB2S92V" received "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE"
+2021-01-06 02:08:34.159 +01:00 [VRB] Connection id "0HM5HRUB2S92V" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 02:08:34.173 +01:00 [VRB] Connection id "0HM5HRUB2S92V" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 02:08:34.187 +01:00 [VRB] Connection id "0HM5HRUB2S92V" received "HEADERS" frame for stream ID 1 with length 477 and flags "END_STREAM, END_HEADERS, PRIORITY"
+2021-01-06 02:08:34.256 +01:00 [VRB] Connection id "0HM5HRUB2S92V" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 02:08:34.366 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5000/api/users  
+2021-01-06 02:08:34.389 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-01-06 02:08:34.400 +01:00 [VRB] All hosts are allowed.
+2021-01-06 02:08:34.494 +01:00 [DBG] 1 candidate(s) found for the request path '/api/users'
+2021-01-06 02:08:34.524 +01:00 [DBG] Endpoint 'UserService.Controllers.UsersController.GetAll (UserService)' with route pattern 'api/Users' is valid for the request path '/api/users'
+2021-01-06 02:08:34.676 +01:00 [DBG] Request matched endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 02:08:34.715 +01:00 [INF] Executing endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 02:08:34.757 +01:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2021-01-06 02:08:34.905 +01:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UserService.Controllers.UsersController (UserService).
+2021-01-06 02:08:34.918 +01:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2021-01-06 02:08:34.927 +01:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2021-01-06 02:08:34.942 +01:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2021-01-06 02:08:34.964 +01:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2021-01-06 02:08:34.975 +01:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2021-01-06 02:08:34.996 +01:00 [DBG] Executing controller factory for controller UserService.Controllers.UsersController (UserService)
+2021-01-06 02:08:35.278 +01:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2021-01-06 02:08:35.340 +01:00 [DBG] Executed controller factory for controller UserService.Controllers.UsersController (UserService)
+2021-01-06 02:08:35.351 +01:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 02:08:35.370 +01:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 02:08:35.431 +01:00 [VRB] Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 02:08:35.457 +01:00 [VRB] Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 02:08:35.482 +01:00 [INF] Executing action method UserService.Controllers.UsersController.GetAll (UserService) - Validation state: "Valid"
+2021-01-06 02:08:36.555 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-01-06 02:08:36.659 +01:00 [DBG] Compiling query expression: 
+'DbSet<User>()'
+2021-01-06 02:08:36.983 +01:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.age (string), 1], [Property: User.email_adress (string), 2], [Property: User.first_name (string), 3], [Property: User.last_name (string), 4], [Property: User.password (string), 5], }
+        SELECT u.id, u.age, u.email_adress, u.first_name, u.last_name, u.password
+        FROM Users AS u), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    UserService.Model.DataContext, 
+    False, 
+    False
+)'
+2021-01-06 02:08:37.040 +01:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2021-01-06 02:08:37.118 +01:00 [DBG] Created DbCommand for 'ExecuteReader' (62ms).
+2021-01-06 02:08:37.137 +01:00 [DBG] Opening connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 02:08:38.654 +01:00 [DBG] Opened connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 02:08:38.675 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[id], [u].[age], [u].[email_adress], [u].[first_name], [u].[last_name], [u].[password]
+FROM [Users] AS [u]
+2021-01-06 02:08:39.032 +01:00 [INF] Executed DbCommand (341ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[id], [u].[age], [u].[email_adress], [u].[first_name], [u].[last_name], [u].[password]
+FROM [Users] AS [u]
+2021-01-06 02:08:39.108 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 02:08:39.177 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 02:08:39.183 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 02:08:39.193 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 02:08:39.212 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 02:08:39.223 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 02:08:39.232 +01:00 [DBG] Context 'DataContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2021-01-06 02:08:39.249 +01:00 [DBG] A data reader was disposed.
+2021-01-06 02:08:39.259 +01:00 [DBG] Closing connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 02:08:39.282 +01:00 [DBG] Closed connection to database 'MicroservicesJavaApp' on server 'tcp:microservicesjavaappdbserver.database.windows.net,1433'.
+2021-01-06 02:08:39.301 +01:00 [INF] Executed action method UserService.Controllers.UsersController.GetAll (UserService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3802.1109ms.
+2021-01-06 02:08:39.311 +01:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 02:08:39.319 +01:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2021-01-06 02:08:39.330 +01:00 [VRB] Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 02:08:39.338 +01:00 [VRB] Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2021-01-06 02:08:39.351 +01:00 [VRB] Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 02:08:39.361 +01:00 [VRB] Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 02:08:39.370 +01:00 [VRB] Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2021-01-06 02:08:39.381 +01:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2021-01-06 02:08:39.395 +01:00 [DBG] No information found on request to perform content negotiation.
+2021-01-06 02:08:39.399 +01:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2021-01-06 02:08:39.405 +01:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2021-01-06 02:08:39.418 +01:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2021-01-06 02:08:39.424 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[UserService.Model.User, UserService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-01-06 02:08:39.487 +01:00 [VRB] Connection id "0HM5HRUB2S92V" sending "HEADERS" frame for stream ID 1 with length 123 and flags "END_HEADERS"
+2021-01-06 02:08:39.505 +01:00 [VRB] Connection id "0HM5HRUB2S92V" sending "DATA" frame for stream ID 1 with length 706 and flags "NONE"
+2021-01-06 02:08:39.518 +01:00 [VRB] After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2021-01-06 02:08:39.598 +01:00 [VRB] Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 02:08:39.607 +01:00 [VRB] Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2021-01-06 02:08:39.631 +01:00 [INF] Executed action UserService.Controllers.UsersController.GetAll (UserService) in 4628.8194ms
+2021-01-06 02:08:39.649 +01:00 [INF] Executed endpoint 'UserService.Controllers.UsersController.GetAll (UserService)'
+2021-01-06 02:08:39.683 +01:00 [INF] HTTP GET /api/users responded 200 in 5245.2297 ms
+2021-01-06 02:08:39.704 +01:00 [VRB] Connection id "0HM5HRUB2S92V" sending "DATA" frame for stream ID 1 with length 0 and flags "END_STREAM"
+2021-01-06 02:08:39.723 +01:00 [DBG] 'DataContext' disposed.
+2021-01-06 02:08:39.795 +01:00 [INF] Request finished in 5450.1915ms 200 application/json; charset=utf-8
+2021-01-06 02:10:00.995 +01:00 [DBG] Hosting starting
+2021-01-06 02:10:01.757 +01:00 [DBG] Failed to locate the development https certificate at 'null'.
+2021-01-06 02:10:01.817 +01:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 04FCC8833D747B4EC23C7D55EB302A8BB9D18B02)
+2021-01-06 02:10:01.832 +01:00 [INF] Now listening on: https://localhost:5000
+2021-01-06 02:10:01.834 +01:00 [DBG] Loaded hosting startup assembly UserService
+2021-01-06 02:10:01.838 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-06 02:10:01.839 +01:00 [INF] Hosting environment: Development
+2021-01-06 02:10:01.841 +01:00 [INF] Content root path: C:\Users\Admin\source\repos\UserService\UserService
+2021-01-06 02:10:01.843 +01:00 [DBG] Hosting started
+2021-01-06 02:10:02.228 +01:00 [DBG] Connection id "0HM5HRV5N9LNN" accepted.
+2021-01-06 02:10:02.228 +01:00 [DBG] Connection id "0HM5HRV5N9LNM" accepted.
+2021-01-06 02:10:02.242 +01:00 [DBG] Connection id "0HM5HRV5N9LNN" started.
+2021-01-06 02:10:02.242 +01:00 [DBG] Connection id "0HM5HRV5N9LNM" started.
+2021-01-06 02:10:02.282 +01:00 [DBG] Connection id "0HM5HRV5N9LNN" reset.
+2021-01-06 02:10:02.282 +01:00 [DBG] Connection id "0HM5HRV5N9LNM" reset.
+2021-01-06 02:10:02.295 +01:00 [DBG] Failed to authenticate HTTPS connection.
+Microsoft.AspNetCore.Connections.ConnectionResetException: An existing connection was forcibly closed by the remote host.
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.<GetResult>g__ThrowSocketException|7_0(SocketError e)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.GetResult()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.ProcessReceives()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.DoReceive()
+   --- End of inner exception stack trace ---
+   at System.IO.Pipelines.PipeCompletion.ThrowLatchedException()
+   at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+   at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+   at System.IO.Pipelines.Pipe.DefaultPipeReader.GetResult(Int16 token)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.DuplexPipeStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+   at System.Net.FixedSizeReader.ReadPacketAsync(Stream transport, AsyncProtocolRequest request)
+   at System.Net.Security.SslStream.ThrowIfExceptional()
+   at System.Net.Security.SslStream.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsServer(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__69_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.InnerOnConnectionAsync(ConnectionContext context)
+2021-01-06 02:10:02.295 +01:00 [DBG] Failed to authenticate HTTPS connection.
+Microsoft.AspNetCore.Connections.ConnectionResetException: An existing connection was forcibly closed by the remote host.
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.<GetResult>g__ThrowSocketException|7_0(SocketError e)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.GetResult()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.ProcessReceives()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.DoReceive()
+   --- End of inner exception stack trace ---
+   at System.IO.Pipelines.PipeCompletion.ThrowLatchedException()
+   at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+   at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+   at System.IO.Pipelines.Pipe.DefaultPipeReader.GetResult(Int16 token)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.DuplexPipeStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+   at System.Net.FixedSizeReader.ReadPacketAsync(Stream transport, AsyncProtocolRequest request)
+   at System.Net.Security.SslStream.ThrowIfExceptional()
+   at System.Net.Security.SslStream.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsServer(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__69_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.InnerOnConnectionAsync(ConnectionContext context)
+2021-01-06 02:10:02.643 +01:00 [DBG] Connection id "0HM5HRV5N9LNO" accepted.
+2021-01-06 02:10:02.750 +01:00 [DBG] Connection id "0HM5HRV5N9LNN" stopped.
+2021-01-06 02:10:02.797 +01:00 [DBG] Connection id "0HM5HRV5N9LNM" stopped.
+2021-01-06 02:10:02.811 +01:00 [DBG] Connection id "0HM5HRV5N9LNO" started.
+2021-01-06 02:10:02.816 +01:00 [DBG] Connection id "0HM5HRV5N9LNM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-01-06 02:10:02.816 +01:00 [DBG] Connection id "0HM5HRV5N9LNN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2021-01-06 02:10:02.899 +01:00 [VRB] Connection id "0HM5HRV5N9LNO" sending "SETTINGS" frame for stream ID 0 with length 18 and flags "NONE"
+2021-01-06 02:10:02.977 +01:00 [VRB] Connection id "0HM5HRV5N9LNO" sending "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 02:10:02.982 +01:00 [VRB] Connection id "0HM5HRV5N9LNO" received "SETTINGS" frame for stream ID 0 with length 24 and flags "NONE"
+2021-01-06 02:10:02.995 +01:00 [VRB] Connection id "0HM5HRV5N9LNO" sending "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 02:10:03.008 +01:00 [VRB] Connection id "0HM5HRV5N9LNO" received "WINDOW_UPDATE" frame for stream ID 0 with length 4 and flags 0x0
+2021-01-06 02:10:03.015 +01:00 [VRB] Connection id "0HM5HRV5N9LNO" received "HEADERS" frame for stream ID 1 with length 478 and flags "END_STREAM, END_HEADERS, PRIORITY"
+2021-01-06 02:10:03.071 +01:00 [VRB] Connection id "0HM5HRV5N9LNO" received "SETTINGS" frame for stream ID 0 with length 0 and flags "ACK"
+2021-01-06 02:10:03.160 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5000/Services/  
+2021-01-06 02:10:03.180 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-01-06 02:10:03.182 +01:00 [VRB] All hosts are allowed.
+2021-01-06 02:10:03.248 +01:00 [DBG] No candidates found for the request path '/Services/'
+2021-01-06 02:10:03.250 +01:00 [DBG] Request did not match any endpoints
+2021-01-06 02:10:03.267 +01:00 [INF] HTTP GET /Services/ responded 404 in 72.2886 ms
+2021-01-06 02:10:03.289 +01:00 [VRB] Connection id "0HM5HRV5N9LNO" sending "HEADERS" frame for stream ID 1 with length 95 and flags "END_STREAM, END_HEADERS"
+2021-01-06 02:10:03.314 +01:00 [INF] Request finished in 164.3193ms 404 
+2021-01-06 02:10:04.312 +01:00 [INF] Application is shutting down...
+2021-01-06 02:10:04.314 +01:00 [DBG] Hosting stopping
+2021-01-06 02:10:04.320 +01:00 [DBG] Connection id "0HM5HRV5N9LNO" is closing.
+2021-01-06 02:10:04.329 +01:00 [DBG] Connection id "0HM5HRV5N9LNO" is closed. The last processed stream ID was 1.
+2021-01-06 02:10:04.332 +01:00 [VRB] Connection id "0HM5HRV5N9LNO" sending "GOAWAY" frame for stream ID 0 with length 8 and flags 0x0
+2021-01-06 02:10:04.337 +01:00 [DBG] Connection id "0HM5HRV5N9LNO" received FIN.
+2021-01-06 02:10:04.339 +01:00 [DBG] Connection id "0HM5HRV5N9LNO" sending FIN because: "The client closed the connection."
+2021-01-06 02:10:04.345 +01:00 [DBG] Connection id "0HM5HRV5N9LNO" stopped.
+2021-01-06 02:10:04.349 +01:00 [DBG] Hosting stopped

@@ -2,43 +2,43 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using UserService.Model;
+using ReservationService.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Cors;
 //using Microsoft.Azure.ServiceBus;
 
 
-namespace UserService.Controllers
+namespace ReservationService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
 
-    public class UsersController : ControllerBase
+    public class ReservationsController : ControllerBase
     {
         public readonly DataContext _context;
 
-        public UsersController(DataContext context)
+        public ReservationsController(DataContext context)
         {
             _context = context;
-        
+
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult GetAll()
         {
-        return Ok(_context.Users.ToList());
+            return Ok(_context.Reservations.ToList());
         }
 
-
         [HttpPost]
-        public IActionResult Add(User p)
+        [AllowAnonymous]
+        public IActionResult Add(Reservation p)
         {
-            _context.Users.Add(p);
+            _context.Reservations.Add(p);
             _context.SaveChanges();
 
-            return Created("/api/users/", p);
+            return Created("/api/reservations/", p);
 
         }
 
